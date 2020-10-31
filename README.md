@@ -53,6 +53,11 @@
 - `brew cask install iterm2`
 - `npm install -g n`
 
+### Git setup
+
+- `git config --global user.name "Your Name Here"`
+- `git config --global user.email "your_email@youremail.com"`
+
 ### Visual Studio Code
 
 - Run command: Install 'code' command in path
