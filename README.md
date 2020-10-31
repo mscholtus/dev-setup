@@ -15,6 +15,13 @@
 - Check and install any available updates
 - Setup browser extensions
 
+## Finder
+
+- `mkdir ~/Development`
+- `mkdir ~/Documents/Screenshots/`
+- Save Screenshots to `~/Documents/Screenshots`: `defaults write com.apple.screencapture location ~/Documents/Screenshots && killall SystemUIServer`
+- Add `home` and `~/Development` folders to sidebar
+
 ### Download software
 
 - [Chrome](https://www.google.com/intl/nl_nl/chrome/)
@@ -23,18 +30,6 @@
 - [Firefox](https://www.mozilla.org/en-US/firefox/all/#product-desktop-release)
 - [Spotify](https://www.spotify.com/nl/download/mac/)
 - [Visual Studio Code](https://code.visualstudio.com/)
-
-### App Store
-
-- Affinity Designer
-- Magnet
-- MindNode
-- NordVPN
-- Slack
-- The Unarchiver
-- Things
-- Reeder (setup Safari extension)
-- Wipr (setup Safari extension)
 
 --------
 
@@ -51,12 +46,31 @@
 
 - `brew install node`
 - `brew cask install iterm2`
-- `npm install -g n`
+- `npm install -g n diff-so-fancy`
+    - [n](https://www.npmjs.com/package/n)
+    - [diff-so-fancy](https://www.npmjs.com/package/diff-so-fancy)
 
-### Git setup
+- Diff-so-fancy setup
+```bash
+git config --global core.pager "diff-so-fancy | less --tabs=4 -RFX"
+git config --global color.ui true
+git config --global color.diff-highlight.oldNormal    "red bold"
+git config --global color.diff-highlight.oldHighlight "red bold 52"
+git config --global color.diff-highlight.newNormal    "green bold"
+git config --global color.diff-highlight.newHighlight "green bold 22"
+git config --global color.diff.meta       "11"
+git config --global color.diff.frag       "magenta bold"
+git config --global color.diff.commit     "yellow bold"
+git config --global color.diff.old        "red bold"
+git config --global color.diff.new        "green bold"
+git config --global color.diff.whitespace "red reverse"
+```
+
+### Git/ssh keys setup
 
 - `git config --global user.name "Your Name Here"`
 - `git config --global user.email "your_email@youremail.com"`
+- Setup ssh keys in Github and Bitbucket accounts. [Guide](https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
 
 ### Visual Studio Code
 
@@ -77,10 +91,16 @@ Settings.json
 
 [One Dark theme](https://github.com/one-dark/iterm-one-dark-theme)
 
-Go to iTerm2 -> Profiles -> Colors -> Color presets… -> One Dark
-Go to iTerm2 -> Profiles -> Text -> Font -> Fira Code Retina
-Go to iTerm2 -> Preferences -> Advanced and scroll to the Drawing section, then change:
-
-`Improves drawing performance at the expense of disallowing alphanumeric characters to belong to ligatures.` to `No`
+- Go to iTerm2 -> Profiles -> Colors -> Color presets… -> One Dark
+- Go to iTerm2 -> Profiles -> Text -> Font -> Fira Code Retina
+- Go to iTerm2 -> Preferences -> Advanced and scroll to the Drawing section, then change:
+    - `Improves drawing performance at the expense of disallowing alphanumeric characters to belong to ligatures.` to `No`
+- Go to iTerm2 -> Appearance -> General -> Theme -> Minimal
 
 ### Zsh + Oh My Zsh
+
+- `brew install zsh`
+- `git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions`
+- `git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting`
+- `sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"`
+- Plugins: `plugins=(git colored-man-pages colorize brew osx zsh-syntax-highlighting zsh-autosuggestions z)`
