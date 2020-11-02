@@ -104,3 +104,12 @@ Settings.json
 - `git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting`
 - `sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"`
 - Plugins: `plugins=(git colored-man-pages colorize brew osx zsh-syntax-highlighting zsh-autosuggestions z)`
+
+### Keyboard and mouse setup
+
+For using MX Master 3 and mech keyboard.
+
+- Download [Logi Options](https://www.logitech.com/nl-nl/product/options)
+- Download [Karabiner Elements](https://karabiner-elements.pqrs.org)
+- Setup Karabiner and Logi Options
+- Copy karabiner config: `cp karabiner/karabiner.json ~/.config/karabiner`
