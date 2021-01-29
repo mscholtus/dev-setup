@@ -17,9 +17,14 @@
 
 ## Finder
 
-- `mkdir ~/Development`
-- `mkdir ~/Documents/Screenshots/`
-- Save Screenshots to `~/Documents/Screenshots`: `defaults write com.apple.screencapture location ~/Documents/Screenshots && killall SystemUIServer`
+Create development and screenshots folder and save screenshots to this folder:
+
+```bash
+mkdir ~/Development
+mkdir ~/Documents/Screenshots/
+defaults write com.apple.screencapture location ~/Documents/Screenshots && killall SystemUIServer
+```
+
 - Add `home` and `~/Development` folders to sidebar
 
 ### Download software
@@ -44,13 +49,13 @@
 
 ### Setup packages
 
-- `brew install node`
-- `brew cask install iterm2`
-- `npm install -g n diff-so-fancy`
-    - [n](https://www.npmjs.com/package/n)
-    - [diff-so-fancy](https://www.npmjs.com/package/diff-so-fancy)
-
-- Diff-so-fancy setup
+```bash
+brew install node
+brew cask install iterm2
+npm install -g n diff-so-fancy
+```
+- [n](https://www.npmjs.com/package/n)
+- [diff-so-fancy](https://www.npmjs.com/package/diff-so-fancy) setup:
 ```bash
 git config --global core.pager "diff-so-fancy | less --tabs=4 -RFX"
 git config --global color.ui true
@@ -68,13 +73,15 @@ git config --global color.diff.whitespace "red reverse"
 
 ### Git/ssh keys setup
 
-- `git config --global user.name "Your Name Here"`
-- `git config --global user.email "your_email@youremail.com"`
+```bash
+git config --global user.name "Your Name Here"
+git config --global user.email "your_email@youremail.com"
+```
 - Setup ssh keys in Github and Bitbucket accounts. [Guide](https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
 
 ### Visual Studio Code
 
-- Run command: Install 'code' command in path
+- Run VS code command: `Install 'code' command in path`
 - Install [One Dark Pro](https://marketplace.visualstudio.com/items?itemName=zhuangtongfa.Material-theme)
 - Install [Fire Code](https://github.com/tonsky/FiraCode/releases)
 
@@ -99,10 +106,12 @@ Settings.json
 
 ### Zsh + Oh My Zsh
 
-- `brew install zsh`
-- `git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions`
-- `git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting`
-- `sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"`
+```bash
+brew install zsh
+git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+```
 - Plugins: `plugins=(git colored-man-pages colorize brew osx zsh-syntax-highlighting zsh-autosuggestions z)`
 
 ### Keyboard and mouse setup
