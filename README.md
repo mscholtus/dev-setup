@@ -107,9 +107,6 @@ Settings.json
 
 ### Keyboard and mouse setup
 
-For using MX Master 3 and mech keyboard.
-
-- Download [Logi Options](https://www.logitech.com/nl-nl/product/options)
-- Download [Karabiner Elements](https://karabiner-elements.pqrs.org)
-- Setup Karabiner and Logi Options
-- Copy karabiner config: `cp karabiner/karabiner.json ~/.config/karabiner`
+- Download [Logi Options](https://www.logitech.com/nl-nl/product/options) for Logitech MX Master 3
+- Download [VIA](https://caniusevia.com) for Idobao ID80V2 mechanical keyboard
+- If keyboard needs to be flashed, load `via/idobao_id80v2.json` VIA config.
